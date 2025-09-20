@@ -7,13 +7,11 @@ export class AudioDescriptionService {
       alert('Seu navegador não suporta áudio descrição.');
       return;
     }
-
     window.speechSynthesis.cancel();
-
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'pt-BR';
-    utterance.rate = 1;   // velocidade normal
-    utterance.pitch = 1;  // tom normal
+    utterance.rate = 1;
+    utterance.pitch = 1;
     window.speechSynthesis.speak(utterance);
   }
 }

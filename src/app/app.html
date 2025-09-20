@@ -1,8 +1,9 @@
 <header class="header">
-  <div class="logo">Portal Inclusivo</div>
-  <input type="text" placeholder="Buscar notícias..." aria-label="Buscar notícias" />
+  <div class="logo">{{ title }}</div>
+  <input type="text" placeholder="Buscar notícias..." aria-label="Buscar notícias"/>
   <button (click)="accessibility.toggleHighContrast()" aria-label="Ativar alto contraste">
-    ♿ Contraste
+    <fa-icon [icon]="faAccessibleIcon"/>
+    Contraste
   </button>
 </header>
 
@@ -18,11 +19,14 @@
 <main>
   <!-- Destaque -->
   <section class="destaque">
-    <img src="assets/destaque.jpg" alt="Imagem da notícia principal" />
+    <img src="" alt="Imagem da notícia principal"/>
     <div>
       <h1>Notícia Principal do Dia</h1>
       <p>Resumo da notícia principal em destaque...</p>
-      <button (click)="audio.speak('Resumo da notícia principal em destaque...')">🔊 Ouvir</button>
+      <button (click)="audio.speak('Resumo da notícia principal em destaque...')">
+        <fa-icon [icon]="faPlay"/>
+        Ouvir
+      </button>
     </div>
   </section>
 
@@ -33,12 +37,18 @@
       <article>
         <h3>Notícia 1</h3>
         <p>Resumo curto da notícia 1...</p>
-        <button (click)="audio.speak('Resumo curto da notícia 1...')">🔊 Ouvir</button>
+        <button (click)="audio.speak('Resumo curto da notícia 1...')">
+          <fa-icon [icon]="faPlay"/>
+          Ouvir
+        </button>
       </article>
       <article>
         <h3>Notícia 2</h3>
         <p>Resumo curto da notícia 2...</p>
-        <button (click)="audio.speak('Resumo curto da notícia 2...')">🔊 Ouvir</button>
+        <button (click)="audio.speak('Resumo curto da notícia 2...')">
+          <fa-icon [icon]="faPlay"/>
+          Ouvir
+        </button>
       </article>
     </div>
 
@@ -47,6 +57,10 @@
       <article>
         <h3>Notícia 3</h3>
         <p>Resumo curto da notícia esportiva...</p>
+        <button (click)="audio.speak('Resumo curto da notícia esportiva...')">
+          <fa-icon [icon]="faPlay"/>
+          Ouvir
+        </button>
       </article>
     </div>
 
@@ -55,6 +69,10 @@
       <article>
         <h3>Notícia 4</h3>
         <p>Resumo curto da notícia de tecnologia...</p>
+        <button (click)="audio.speak('Resumo curto da notícia de tecnologia...')">
+          <fa-icon [icon]="faPlay"/>
+          Ouvir
+        </button>
       </article>
     </div>
   </section>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tcc-facul": {
+    "portal-noticias-inclusivo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "tcc-facul:build:production"
+              "buildTarget": "portal-noticias-inclusivo:build:production"
             },
             "development": {
-              "buildTarget": "tcc-facul:build:development"
+              "buildTarget": "portal-noticias-inclusivo:build:development"
             }
           },
           "defaultConfiguration": "development"

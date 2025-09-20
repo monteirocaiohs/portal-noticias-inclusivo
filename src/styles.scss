@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+body {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+body.high-contrast {
+  --bg-color: #000000;
+  --text-color: #ffff00;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}

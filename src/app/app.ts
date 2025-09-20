@@ -1,5 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { AccessibilityService } from './services/accessibility.service';
+import { AudioDescriptionService } from './services/audio-description.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +10,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('tcc-facul');
+  title = 'portal-inclusivo';
+
+  constructor(
+    public accessibility: AccessibilityService,
+    public audio: AudioDescriptionService
+  ) {}
+
 }

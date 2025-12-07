@@ -1,86 +1,121 @@
-<header class="header">
-  <div class="logo">{{ title }}</div>
-  <input type="text" placeholder="Buscar notícias..." aria-label="Buscar notícias"/>
-  <button (click)="accessibility.toggleHighContrast()" aria-label="Ativar alto contraste">
-    <fa-icon [icon]="faAccessibleIcon"/>
-    Contraste
-  </button>
+<header class="main-header">
+  <div class="container">
+    <a href="#" class="logo">Portal noticias inclusivo</a>
+
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Política</a></li>
+        <li><a href="#">Economia</a></li>
+        <li><a href="#">Tecnologia</a></li>
+      </ul>
+    </nav>
+
+    <button class="contrast-button" (click)="accessibility.toggleHighContrast()">
+      <fa-icon [icon]="faAccessibleIcon"/>
+      Alto Contraste
+    </button>
+  </div>
 </header>
 
-<nav class="menu">
-  <a href="#">Home</a>
-  <a href="#">Política</a>
-  <a href="#">Economia</a>
-  <a href="#">Esportes</a>
-  <a href="#">Tecnologia</a>
-  <a href="#">Cultura</a>
-</nav>
+<section class="highlights-section">
+  <h2 class="section-title">Destaques do Dia</h2>
 
-<main>
-  <!-- Destaque -->
-  <section class="destaque">
-    <img src="" alt="Imagem da notícia principal"/>
-    <div>
-      <h1>Notícia Principal do Dia</h1>
-      <p>Resumo da notícia principal em destaque...</p>
-      <button (click)="audio.speak('Resumo da notícia principal em destaque...')">
+  <div class="highlights-container">
+
+    <article class="main-card">
+      <div class="main-card-image">
+        <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/12/norris.jpg?w=532&h=299&crop=1"/>
+      </div>
+
+      <div class="main-card-content">
+        <h3>Lando Norris conquista o título da Fórmula 1 pela primeira vez na carreira</h3>
+        <p>Piloto britânico da McLaren correu com ‘regulamento embaixo do braço’ e fez o suficiente para ganhar o
+          primeiro título de sua carreira; Bortoleto terminou em 11º.</p>
+        <a href="#" class="read-more">Ler Artigo Completo »</a>
+        <button class="floating-button">
+          <fa-icon [icon]="faPlay"/>
+        </button>
+      </div>
+    </article>
+
+    <article class="secondary-card">
+      <h4>Mercado financeiro<p>Após recordes, Ibovespa B3 vira e tem queda de mais de 4%</p></h4>
+      <div class="main-card-image">
+        <img
+          src="https://s2-oglobo.glbimg.com/W00sYNC6IXqUSSMl7pjSEM-txKM=/1080x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2024/1/A/gegc5VTg6GBhaq8d7HCQ/362057254.jpg"/>
+      </div>
+      <p>Neste semana, o Ibovespa atingiu pela primeira vez as marcas de 162 mil, 163 mil e 164 mil pontos</p>
+      <a href="#" class="view-details">Ver Detalhes »</a>
+      <button class="floating-button secondary-floating">
         <fa-icon [icon]="faPlay"/>
-        Ouvir
+      </button>
+    </article>
+  </div>
+</section>
+
+<section class="cards-section">
+
+  <article class="news-card sports-card">
+    <div class="card-content">
+      <h3>Esportes: Brasil vence Portugal e é campeão da 1ª Copa do Mundo de Futsal Feminino.</h3>
+      <div class="main-card-image">
+        <img
+          src="https://conteudo.imguol.com.br/c/esporte/a3/2025/12/07/amandinha-anotou-o-segundo-gol-do-brasil-contra-portugal-na-final-da-copa-do-mundo-de-futsal-feminino-1765112656332_v2_450x450.jpg.webp"/>
+      </div>
+      <p>O Brasil venceu Portugal por 3 a 0 na final da Copa do Mundo de Futsal Feminino, que aconteceu hoje nas
+        Filipinas.</p>
+      <a href="#" class="details-link">Resultados Completos »</a>
+      <button class="floating-button card-floating-button">
+        <fa-icon [icon]="faPlay"/>
       </button>
     </div>
-  </section>
+  </article>
 
-  <!-- Grade de Notícias -->
-  <section class="noticias">
-    <div class="coluna">
-      <h2>Manchetes</h2>
-      <article>
-        <h3>Notícia 1</h3>
-        <p>Resumo curto da notícia 1...</p>
-        <button (click)="audio.speak('Resumo curto da notícia 1...')">
-          <fa-icon [icon]="faPlay"/>
-          Ouvir
-        </button>
-      </article>
-      <article>
-        <h3>Notícia 2</h3>
-        <p>Resumo curto da notícia 2...</p>
-        <button (click)="audio.speak('Resumo curto da notícia 2...')">
-          <fa-icon [icon]="faPlay"/>
-          Ouvir
-        </button>
-      </article>
+  <article class="news-card sports-card">
+    <div class="card-content">
+      <h3>Carros: Peugeot 2008 terá versão híbrida mais barata já no início de 2026</h3>
+      <div class="main-card-image">
+        <img
+          src="https://s2-autoesporte.glbimg.com/-Y67-uNLyMoYhgzLxkovlS1n-44=/0x0:1980x1320/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2024/E/j/5A5nwGQpGMefje9BS6WQ/pedrobicudo-0713.jpg"/>
+      </div>
+      <p>Peugeot 2008 Allure, versão intermediária, hoje custa R$ 166.990 e vai ganhar o mesmo motor híbrido leve da versão GT (R$ 181.990).</p>
+      <a href="#" class="details-link">Resultados Completos »</a>
+      <button class="floating-button card-floating-button">
+        <fa-icon [icon]="faPlay"/>
+      </button>
     </div>
+  </article>
 
-    <div class="coluna">
-      <h2>Esportes</h2>
-      <article>
-        <h3>Notícia 3</h3>
-        <p>Resumo curto da notícia esportiva...</p>
-        <button (click)="audio.speak('Resumo curto da notícia esportiva...')">
-          <fa-icon [icon]="faPlay"/>
-          Ouvir
-        </button>
-      </article>
+  <article class="news-card sports-card">
+    <div class="card-content">
+      <h3>Cidade: Diamantes, Rolex, iPhones, ukulele: Justiça define prazo para resgate de 17 mil itens perdidos em aeroporto em Guarulhos</h3>
+      <div class="main-card-image">
+        <img
+          src="https://s2-g1.glbimg.com/eW6UUnrxQaNl5wP07eWW8gKheOE=/0x0:799x533/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/r/T/bmr1tvRVqiqAXNe6eWcQ/51381520009-67cae1029e-c.jpg"/>
+      </div>
+      <p>Objetos foram achados, perdidos ou abandonados no Aeroporto Internacional de São Paulo entre abril de 2019 e outubro de 2020.</p>
+      <a href="#" class="details-link">Resultados Completos »</a>
+      <button class="floating-button card-floating-button">
+        <fa-icon [icon]="faPlay"/>
+      </button>
     </div>
+  </article>
 
-    <div class="coluna">
-      <h2>Tecnologia</h2>
-      <article>
-        <h3>Notícia 4</h3>
-        <p>Resumo curto da notícia de tecnologia...</p>
-        <button (click)="audio.speak('Resumo curto da notícia de tecnologia...')">
-          <fa-icon [icon]="faPlay"/>
-          Ouvir
-        </button>
-      </article>
-    </div>
-  </section>
-</main>
+</section>
 
-<footer>
-  <p>&copy; 2025 Portal Inclusivo - Todos os direitos reservados</p>
-  <nav>
-    <a href="#">Sobre</a> | <a href="#">Contato</a> | <a href="#">Acessibilidade</a>
-  </nav>
+
+<footer class="main-footer">
+  <div class="footer-content">
+    <p>
+      © 2025 Portal de Notícias Inclusivo. Todos os direitos reservados.
+      <span class="separator">|</span>
+      Desenvolvido com Foco em Acessibilidade.
+    </p>
+  </div>
+  <div class="accessibility-widget">
+    <div class="widget-icon top-icon">A+</div>
+    <div class="widget-icon middle-icon">T</div>
+    <div class="widget-icon bottom-icon">K</div>
+  </div>
 </footer>

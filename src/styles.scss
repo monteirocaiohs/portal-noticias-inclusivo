@@ -1,15 +1,76 @@
-/* You can add global styles to this file, and also import other style files */
 body {
-  --bg-color: #ffffff;
-  --text-color: #000000;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-body.high-contrast {
-  --bg-color: #000000;
-  --text-color: #ffff00;
+/* Estilos específicos para o modo de Alto Contraste (ativado pela classe 'high-contrast' no body) */
+.high-contrast {
+  background-color: #000 !important;
+  color: #FFFF00 !important; /* Texto amarelo para alto contraste */
 }
 
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+.high-contrast * {
+  box-shadow: none !important;
+  border-color: #FFFF00 !important;
+  color: inherit !important;
+}
+
+.high-contrast .bg-white {
+  background-color: #000 !important;
+}
+
+.high-contrast .text-gray-900,
+.high-contrast .text-gray-600,
+.high-contrast .text-gray-500 {
+  color: #FFFF00 !important;
+}
+
+/* Links no modo de alto contraste: sublinhado obrigatório e cor amarela */
+.high-contrast a, .high-contrast .text-secondary {
+  color: #FFFFFF !important; /* Links brancos puros */
+  text-decoration: underline !important;
+  outline: 3px solid #FFFF00; /* Foco amarelo para acessibilidade */
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.high-contrast button {
+  background-color: #000 !important;
+  border: 2px solid #FFFF00 !important;
+  color: #FFFF00 !important;
+  outline: 3px solid #FFFF00;
+}
+
+.high-contrast .main-card{
+  background-color: #000 !important;
+  border: 2px solid #FFFF00 !important;
+  color: #FFFF00 !important;
+  outline: 3px solid #FFFF00;
+}
+
+.high-contrast .secondary-card{
+  background-color: #000 !important;
+  border: 2px solid #FFFF00 !important;
+  color: #FFFF00 !important;
+  outline: 3px solid #FFFF00;
+}
+
+.high-contrast .highlights-section{
+  background-color: #000 !important;
+  border: 2px solid #FFFF00 !important;
+  color: #FFFF00 !important;
+  outline: 3px solid #FFFF00;
+}
+
+.high-contrast .cards-section{
+  background-color: #000 !important;
+  border: 2px solid #FFFF00 !important;
+  color: #FFFF00 !important;
+  outline: 3px solid #FFFF00;
+}
+.high-contrast .news-card{
+  background-color: #000 !important;
+  border: 2px solid #FFFF00 !important;
+  color: #FFFF00 !important;
+  outline: 3px solid #FFFF00;
 }
